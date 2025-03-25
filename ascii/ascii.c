@@ -1,10 +1,14 @@
 ﻿#include <stdio.h>
+#include <conio.h>
 
-int main(void){
-	char caracter;
-	printf("Digite um caractere para exibir seu codigo ASCII: ");
-	scanf("%c", &caracter);
-
-	printf("%c = %d\n", caracter, caracter);
-	return 0;
+int main(void) {
+   for(int c=0; c<=255; c++) {
+      printf("%3d => %c\n",c,c);
+      if( c%16==15 ) {
+         printf("\nPressione enter...");
+         _getch();
+         _clrscr();
+      }
+   }
+   return 0;
 }
